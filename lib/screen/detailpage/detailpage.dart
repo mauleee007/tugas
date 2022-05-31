@@ -94,34 +94,38 @@ class _DetailPageState extends State<DetailPage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              "Price",
-                              style: TextStyle(
-                                  color: Colors.grey[500],
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600),
-                            ),
-                            Text(
-                              carsModel[widget.index].price,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 28,
-                                  fontWeight: FontWeight.bold),
-                            )
-                          ],
+                        Flexible(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "Price",
+                                style: TextStyle(
+                                    color: Colors.grey[500],
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600),
+                              ),
+                              Text(
+                                carsModel[widget.index].price,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
                         ),
-                        RaisedButton(
-                          onPressed: () {},
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
-                          color: kTextColor,
-                          padding: EdgeInsets.fromLTRB(28, 8, 28, 8),
-                          child: Text(
-                            "Make Deal",
-                            style: TextStyle(color: kIconColor, fontSize: 15),
+                        Flexible(
+                          child: RaisedButton(
+                            onPressed: () {},
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10)),
+                            color: kTextColor,
+                            padding: EdgeInsets.fromLTRB(28, 8, 28, 8),
+                            child: Text(
+                              "Make Deal",
+                              style: TextStyle(color: kIconColor, fontSize: 15),
+                            ),
                           ),
                         )
                       ],

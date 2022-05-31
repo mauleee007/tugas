@@ -12,7 +12,6 @@ class HomeHeader extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(bottom: getProportionateScreenWidth(25)),
       child: Stack(
-        // overflow: Overflow.visible,
         alignment: Alignment.center,
         children: [
           Image.asset(
